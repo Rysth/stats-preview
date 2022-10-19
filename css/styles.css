@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root{
+  --primary-very-dark-blue: hsl(233, 47%, 7%);
+  --primary-dark-des-blue: hsl(244, 38%, 16%);
+  --primary-soft-violet: hsl(277, 64%, 61%);
+  --primary-soft-violet-transparent: hsl(277, 64%, 61%, 0.9);
+
+  --neutral-white: hsl(0, 0%, 100%);
+  --neutral-slightly-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-slightly-white-two: hsla(0, 0%, 100%, 0.6);
+}
+
+*, *::after, *::before, html{
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  height: 100vh;
+  background-color: var(--primary-very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  max-width: 70rem;
+  background-color: var(--primary-dark-des-blue);
+  border-radius: 10px;
+}
+
+.statistic{
+  display: flex;
+  align-items: center;
+}
+
+.left-content, .right-content{
+  width: 50%;
+}
+
+.left-content{
+  display: inherit;
+  flex-direction: column;
+  color: var(--neutral-white);
+  padding: 1rem 4rem;
+}
+
+.left-content h1{
+  font-size: 2.2rem;
+  max-width: 90%;
+}
+
+.left-content h1 span{
+  font-size: inherit;
+}
+
+.left-content p{
+  font-weight: 400;
+  max-width: 90%;
+  font-size: 1rem;
+  margin-block: .4rem;
+  color: var(--neutral-slightly-white-two);
+  line-height: 1.7;
+}
+
+.left-content .numbers{
+  display: inherit;
+  flex-direction: row;
+  max-width: 85%;
+  justify-content: space-between;
+  margin-top: 2.3rem;
+  margin-bottom: 0;
+}
+
+.numbers div h3{
+  font-size: 1.4rem;
+  margin-bottom: .35rem;
+  font-weight: 700;
+}
+
+.numbers div p{
+  margin-top: 0;
+  text-transform: uppercase;
+  color: var(--neutral-slightly-white-two);
+  font-size: .77rem;
+  letter-spacing: .1rem;
+  font-weight: 400;
+}
+
+.right-content{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.right-content .overlay{
+  background-image: url("../images/image-header-desktop.jpg");
+  background-color: var(--primary-soft-violet-transparent);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 29rem;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.text-purple{
+  color: var(--primary-soft-violet);
+}
+
+.font-family-inter{
+  font-family: "Inter", sans-serif;
+}
+
+.font-family-lexend{
+  font-family: "Lexend", sans-serif;
+}
+
+
+@media (max-width: 1200px){
+
+  body{
+    margin: 3rem;
+  }
+  
+  main{
+    max-width: 22rem;
+  }
+
+  .statistic{
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .left-content, .right-content{
+    width: 100%;
+  }
+
+  .left-content{
+    padding: .5rem 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+  }
+
+  .left-content h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.50rem;
+    max-width: 100%;
+  }
+
+  .left-content p{
+    font-size: .85rem;
+    max-width: 100%;
+  }
+
+  .left-content .numbers{
+    margin-block: .7rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .numbers div p{
+    font-size: .7rem;
+  }
+
+  .right-content{
+    height: 13.3rem !important;
+    border-radius: 10px 10px 0px 0px !important;
+  }
+
+  .right-content .overlay{
+    height: 100%;
+    width: 100%;
+    border-radius: inherit;
+  }
+  
+}
