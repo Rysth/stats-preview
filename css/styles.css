@@ -75,7 +75,7 @@ main{
   margin-bottom: 0;
 }
 
-.numbers div h3{
+.numbers div h2{
   font-size: 1.4rem;
   margin-bottom: .35rem;
   font-weight: 700;
@@ -92,17 +92,28 @@ main{
 
 .right-content{
   border-radius: 0px 10px 10px 0px;
+  position: relative;
 }
 
-.right-content .overlay{
-  background-image: url("../images/image-header-desktop.jpg");
-  background-color: var(--primary-soft-violet-transparent);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 29rem;
+.right-content picture{
   border-radius: 0px 10px 10px 0px;
+  display: flex;
+}
+
+.right-content picture img{
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.right-content .purple-overlay{
+  border-radius: inherit;
+  background-color: var(--primary-soft-violet);
+  mix-blend-mode: multiply;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 .text-purple{
@@ -168,14 +179,15 @@ main{
   }
 
   .right-content{
-    height: 13.3rem !important;
     border-radius: 10px 10px 0px 0px !important;
   }
 
-  .right-content .overlay{
-    height: 100%;
-    width: 100%;
+  .right-content picture{
     border-radius: inherit;
+  }
+
+  .right-content .purple-overlay{
+    border-radius: inherit !important;
   }
   
 }
